@@ -26,6 +26,8 @@ body{
     background: #bc01b6;
     animation: showRight 1s ease forwards;
     animation-delay: .4s;
+    opacity: 7;
+    z-index: 2;
 }
          /* KEYFRAME ANIMATION LOGO */
 @keyframes showRight {
@@ -88,7 +90,7 @@ img{
 }
 .textos h1{
     font-size:80px;
-    /*animation: moverDerecha 1s ease-in; */
+    animation: moverDerecha 1s ease-in;
 }
          /* KEYFRAME ANIMATION TITULO H1 */
 .textos h1::before {
@@ -132,15 +134,17 @@ img{
     background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
 }
 
+      /*-- Contenedor vertical MenuHamb  --*/
 .enlaces{
-    position: fixed;     /*-- fijar elementos --*/
+    position: fixed;     /*-- (Fixed) Fija los elementos --*/
     display: flex;
     top: 0;
     background: #000;
     justify-content: space-around;
     align-items: center;
     height: 100vh;
-    /*right: 0; --*/
+    /*right: 0; --*/  /*-- todo hacia la derecha --*/
+    display: flex;
     flex-direction: column;
     width: 25%;
     transition: all 1s ease;
@@ -150,6 +154,7 @@ img{
 
 }
 
+      /*-- Animación en Circulo del Contenedor del MenuHamb  --*/
 .uno{
     
     -webkit-clip-path: circle(0% at 0 0);
@@ -165,7 +170,7 @@ img{
     }
 
 
-
+    /*-- Resposive  --*/
 @keyframes moverIzquierda{
     0%{
         opacity: 0;
